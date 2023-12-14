@@ -6,7 +6,7 @@
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 15:49:42 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/11 18:37:04 by sfaugere         ###   ########.fr       */
+/*   Updated: 2023/12/12 19:45:45 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,23 @@ Fixed::Fixed(int const rhs)
 
 Fixed::Fixed(float const rhs)
 {
-	float a = rhs;
 	std::cout << "Float constructor called" << std::endl;
-	this->fixe = roundl(a << 8);
+	this->fixe = roundl(rhs * ((1 << this->fract)));
 }
 
 Fixed::~Fixed(void)
 {
 	std::cout << "Default destructor called" << std::endl;
+}
+
+int	Fixed::toInt(void) const
+{
+	return this->getRawBits() / ((1 << this->fract));
+}
+
+float	Fixed::toFloat(void) const
+{
+    return this->getRawBits() / static_cast<float>((1 << this->fract));
 }
 
 Fixed & Fixed::operator=(Fixed const & rhs)
@@ -53,7 +62,6 @@ Fixed & Fixed::operator=(Fixed const & rhs)
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "GetRawBits member function called" << std::endl;
 	return this->fixe;
 }
 
@@ -64,6 +72,6 @@ void	Fixed::setRawBits(int const raw)
 
 std::ostream & operator<<(std::ostream & o, Fixed const &rhs)
 {
-	o << rhs.getRawBits();
-	return (o);
+    o << rhs.toFloat();
+    return o;
 }
