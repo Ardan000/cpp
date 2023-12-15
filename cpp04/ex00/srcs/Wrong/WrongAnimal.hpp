@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 20:33:27 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/15 15:45:29 by sfaugere         ###   ########.fr       */
+/*   Created: 2023/12/14 16:39:33 by sfaugere          #+#    #+#             */
+/*   Updated: 2023/12/15 16:04:29 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
-int main()
+# include <string>
+
+class WrongAnimal
 {
-	FragTrap boulanger("bout en train");
-	for (int i = 0; i < 5; i++)
-	{
+	protected:
+	std::string	_type;
 
-	boulanger.attack("bob");
-	boulanger.takeDamage(5);
-	boulanger.beRepaired(5);
-	boulanger.highFivesGuys();
-	}
-}
+	public:
+	WrongAnimal(void);
+	WrongAnimal(WrongAnimal const & rhs);
+	~WrongAnimal(void);
+	WrongAnimal	&operator=(WrongAnimal const & rhs);
+
+	virtual void	makeSound(void) const;
+	std::string		getType(void) const;
+};
+
+#endif

@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 20:33:27 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/15 15:45:29 by sfaugere         ###   ########.fr       */
+/*   Created: 2023/12/15 15:50:07 by sfaugere          #+#    #+#             */
+/*   Updated: 2023/12/15 16:12:43 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
+#ifndef CAT_HPP
+# define CAT_HPP
 
-int main()
+# include "Animal.hpp"
+
+class Cat : public Animal
 {
-	FragTrap boulanger("bout en train");
-	for (int i = 0; i < 5; i++)
-	{
+	public:
+	Cat(void);
+	Cat(Cat const & rhs);
+	~Cat(void);
+	Cat &operator=(Cat const & rhs);
 
-	boulanger.attack("bob");
-	boulanger.takeDamage(5);
-	boulanger.beRepaired(5);
-	boulanger.highFivesGuys();
-	}
-}
+	void	makeSound(void) const;
+};
+
+#endif

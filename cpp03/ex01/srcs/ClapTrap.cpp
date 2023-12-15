@@ -6,7 +6,7 @@
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 20:54:44 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/14 16:08:11 by sfaugere         ###   ########.fr       */
+/*   Updated: 2023/12/15 15:30:29 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ ClapTrap::~ClapTrap(void)
 void	ClapTrap::attack(const std::string& target)
 {
 	if (this->_energyPoints == 0)
-		std::cout << "ClapTrap don't have enough energy" << std::endl;
+		std::cout << "ClapTrap don't have enough energy for attack." << std::endl;
 	else
 	{
 		this->_energyPoints--;
 		if (this->_energyPoints < 0)
 			this->_energyPoints = 0;
-		std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage !" << std::endl;
+		std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage, and " << this->_energyPoints << " energy points remaining." << std::endl;
 	}
 }
 
@@ -64,7 +64,7 @@ std::cout << _name << " takes " << amout << " damages, it has " << this->_hitPoi
 void	ClapTrap::beRepaired(unsigned int amout)
 {
 	if (this->_energyPoints == 0)
-		std::cout << _name << " don't have enough energy" << std::endl;
+		std::cout << _name << " don't have enough energy for repaired." << std::endl;
 	else
 	{
 		this->_energyPoints--;

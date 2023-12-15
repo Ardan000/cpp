@@ -6,13 +6,13 @@
 #    By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/15 21:24:03 by sfaugere          #+#    #+#              #
-#    Updated: 2023/12/11 16:27:30 by sfaugere         ###   ########.fr        #
+#    Updated: 2023/12/15 14:54:15 by sfaugere         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ### Project setup ###
 
-NAME 		= 
+NAME 		= Fixed
 SRC_DIR 	= srcs
 BUILD_DIR 	= objs
 INC			= includes

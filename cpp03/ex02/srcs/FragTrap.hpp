@@ -6,7 +6,7 @@
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 15:56:56 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/14 16:19:26 by sfaugere         ###   ########.fr       */
+/*   Updated: 2023/12/15 15:44:09 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class FragTrap : public ClapTrap
 	FragTrap	&operator=(FragTrap const & rhs);
 
 	void	attack(const std::string& target);
-	void	highFiveGuys(void);
+	void	highFivesGuys(void);
 };
 
 #endif

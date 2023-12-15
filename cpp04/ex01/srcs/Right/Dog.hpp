@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 20:33:27 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/15 15:45:29 by sfaugere         ###   ########.fr       */
+/*   Created: 2023/12/15 15:50:07 by sfaugere          #+#    #+#             */
+/*   Updated: 2023/12/15 16:12:48 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-int main()
+# include "Animal.hpp"
+
+class Dog : public Animal
 {
-	FragTrap boulanger("bout en train");
-	for (int i = 0; i < 5; i++)
-	{
+	public:
+	Dog(void);
+	Dog(Dog const & rhs);
+	~Dog(void);
+	Dog &operator=(Dog const & rhs);
 
-	boulanger.attack("bob");
-	boulanger.takeDamage(5);
-	boulanger.beRepaired(5);
-	boulanger.highFivesGuys();
-	}
-}
+	void	makeSound(void) const;
+};
+
+#endif

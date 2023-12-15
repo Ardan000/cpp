@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 20:33:27 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/15 15:45:29 by sfaugere         ###   ########.fr       */
+/*   Created: 2023/12/15 16:35:16 by sfaugere          #+#    #+#             */
+/*   Updated: 2023/12/15 16:36:48 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-int main()
+class Brain
 {
-	FragTrap boulanger("bout en train");
-	for (int i = 0; i < 5; i++)
-	{
+	public:
+	Brain(void);
+	Brain(Brain const & rhs);
+	~Brain(void);
+	Brain operator=(Brain const & rhs);
+};
 
-	boulanger.attack("bob");
-	boulanger.takeDamage(5);
-	boulanger.beRepaired(5);
-	boulanger.highFivesGuys();
-	}
-}
+#endif

@@ -6,23 +6,22 @@
 #    By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/15 21:24:03 by sfaugere          #+#    #+#              #
-#    Updated: 2023/12/15 16:23:14 by sfaugere         ###   ########.fr        #
+#    Updated: 2023/12/15 16:34:16 by sfaugere         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ### Project setup ###
 
-NAME 		= Animal
+NAME 		= Brain
 SRC_DIR 	= srcs
 BUILD_DIR 	= objs
 INC			= includes
 
 ### Sources ###
 SRCS += Right/Animal.cpp \
-		Right/Dog.cpp \
 		Right/Cat.cpp \
-		Wrong/WrongAnimal.cpp \
-		Wrong/WrongCat.cpp \
+		Right/Dog.cpp \
+		Brain.cpp \
 		main.cpp
 
 ### Compilation setup ###
