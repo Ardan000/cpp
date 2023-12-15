@@ -6,7 +6,7 @@
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 15:49:42 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/13 20:24:54 by sfaugere         ###   ########.fr       */
+/*   Updated: 2023/12/15 17:50:42 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,13 +120,13 @@ bool	Fixed::operator!=(Fixed const & rhs) const
 
 Fixed Fixed::operator+(Fixed const & rhs) const
 {
-	Fixed copy(this->fixe + rhs.fixe);
+	Fixed copy(this->toFloat() + rhs.toFloat());
 	return copy;
 }
 
 Fixed Fixed::operator-(Fixed const & rhs) const
 {
-	Fixed copy(this->fixe + rhs.fixe);
+	Fixed copy(this->toFloat() - rhs.toFloat());
 	return copy;
 }
 
