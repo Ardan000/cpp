@@ -6,7 +6,7 @@
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 15:53:54 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/15 16:27:41 by sfaugere         ###   ########.fr       */
+/*   Updated: 2024/01/12 22:16:17 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,14 @@ std::cout << j->getType() << " " << std::endl;
 std::cout << i->getType() << " " << std::endl;
 std::cout << wi->getType() << " " << std::endl;
 j->makeSound();
-i->makeSound(); //will output the cat sound!
-wi->makeSound(); //will output the cat sound!
+i->makeSound();
+wi->makeSound();
 meta->makeSound();
 wmeta->makeSound();
 
+delete(meta);
+delete(j);
+delete(i);
+delete(wmeta);
+delete(wi);
 }

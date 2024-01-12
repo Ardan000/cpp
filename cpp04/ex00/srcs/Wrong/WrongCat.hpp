@@ -20,10 +20,10 @@ class WrongCat : public WrongAnimal
 	public:
 	WrongCat(void);
 	WrongCat(WrongCat const & rhs);
-	~WrongCat(void);
+	virtual ~WrongCat(void);
 	WrongCat &operator=(WrongCat const & rhs);
 
-	void	makeSound(void) const;
+	virtual void	makeSound(void) const;
 };
 
 #endif

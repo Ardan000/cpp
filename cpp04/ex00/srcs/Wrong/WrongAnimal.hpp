@@ -23,7 +23,7 @@ class WrongAnimal
 	public:
 	WrongAnimal(void);
 	WrongAnimal(WrongAnimal const & rhs);
-	~WrongAnimal(void);
+	virtual ~WrongAnimal(void);
 	WrongAnimal	&operator=(WrongAnimal const & rhs);
 
 	virtual void	makeSound(void) const;

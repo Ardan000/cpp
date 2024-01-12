@@ -6,7 +6,7 @@
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 19:20:01 by sfaugere          #+#    #+#             */
-/*   Updated: 2024/01/12 23:44:48 by sfaugere         ###   ########.fr       */
+/*   Updated: 2024/01/12 23:55:45 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int	main()
 {
 	{
-	const Animal *Ani[6];
+	const AAnimal *Ani[6];
 
 	for(int i = 0; i < 6; i += 2)
 	{

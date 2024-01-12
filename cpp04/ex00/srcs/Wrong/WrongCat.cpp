@@ -20,7 +20,7 @@ WrongCat::WrongCat(void)
 	this->_type = "WrongCat";
 }
 
-WrongCat::WrongCat(WrongCat const &rhs)
+WrongCat::WrongCat(WrongCat const &rhs) : WrongAnimal(rhs)
 {
 	std::cout << "WrongCat Copy Constructor Called" << std::endl;
 	*this = rhs;
@@ -28,7 +28,7 @@ WrongCat::WrongCat(WrongCat const &rhs)
 
 WrongCat::~WrongCat(void)
 {
-	std::cout << "Animal Default Destructor Called" << std::endl;
+	std::cout << "WrongCat Default Destructor Called" << std::endl;
 }
 
 WrongCat & WrongCat::operator=(WrongCat const & rhs)

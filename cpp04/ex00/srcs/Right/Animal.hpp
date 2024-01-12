@@ -6,7 +6,7 @@
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 16:39:33 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/15 16:04:29 by sfaugere         ###   ########.fr       */
+/*   Updated: 2024/01/12 22:07:03 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Animal
 	public:
 	Animal(void);
 	Animal(Animal const & rhs);
-	~Animal(void);
+	virtual ~Animal(void);
 	Animal	&operator=(Animal const & rhs);
 
 	virtual void	makeSound(void) const;

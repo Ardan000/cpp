@@ -6,7 +6,7 @@
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 15:50:07 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/15 16:12:43 by sfaugere         ###   ########.fr       */
+/*   Updated: 2024/01/12 22:07:08 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ class Cat : public Animal
 	public:
 	Cat(void);
 	Cat(Cat const & rhs);
-	~Cat(void);
+	virtual ~Cat(void);
 	Cat &operator=(Cat const & rhs);
 
-	void	makeSound(void) const;
+	virtual void	makeSound(void) const;
 };
 
 #endif

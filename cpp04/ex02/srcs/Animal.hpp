@@ -6,7 +6,7 @@
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 16:39:33 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/15 16:04:29 by sfaugere         ###   ########.fr       */
+/*   Updated: 2024/01/12 23:55:11 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 
 # include <string>
 
-class Animal
+class AAnimal
 {
 	protected:
 	std::string	_type;
 
 	public:
-	Animal(void);
-	Animal(Animal const & rhs);
-	~Animal(void);
-	Animal	&operator=(Animal const & rhs);
+	AAnimal(void);
+	AAnimal(AAnimal const & rhs);
+	virtual ~AAnimal(void);
+	AAnimal	&operator=(AAnimal const & rhs);
 
-	virtual void	makeSound(void) const;
+	virtual void	makeSound(void) const = 0;
 	std::string		getType(void) const;
 };
 

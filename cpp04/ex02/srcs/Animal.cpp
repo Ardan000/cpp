@@ -1,43 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 15:50:05 by sfaugere          #+#    #+#             */
-/*   Updated: 2023/12/15 16:08:23 by sfaugere         ###   ########.fr       */
+/*   Created: 2023/12/14 16:44:11 by sfaugere          #+#    #+#             */
+/*   Updated: 2024/01/12 23:52:44 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Animal.hpp"
+#include <string>
 #include <iostream>
 
-WrongCat::WrongCat(void)
+AAnimal::AAnimal(void) : _type("animal")
 {
-	std::cout << "WrongCat Default Constructor Called" << std::endl;
-	this->_type = "WrongCat";
+	std::cout << "Animal Default Constructor Called" << std::endl;
 }
 
-WrongCat::WrongCat(WrongCat const &rhs)
+AAnimal::AAnimal(AAnimal const & rhs)
 {
-	std::cout << "WrongCat Copy Constructor Called" << std::endl;
+	std::cout << "Animal Copy Constructor Called" << std::endl;
 	*this = rhs;
 }
 
-WrongCat::~WrongCat(void)
+AAnimal::~AAnimal(void)
 {
 	std::cout << "Animal Default Destructor Called" << std::endl;
 }
 
-WrongCat & WrongCat::operator=(WrongCat const & rhs)
+AAnimal & AAnimal::operator=(AAnimal const & rhs)
 {
+	std::cout << "Animal Copy assignment operator called" << std::endl;
 	this->_type = rhs._type;
 	return *this;
 }
 
-void	WrongCat::makeSound(void) const
+void	AAnimal::makeSound(void) const
 {
-	std::cout << "Wrong Miaou !!!" << std::endl;
+	std::cout << "I AM AN ANIMAL !!!" << std::endl;
+}
+
+std::string AAnimal::getType(void) const
+{
+	return this->_type;
 }
