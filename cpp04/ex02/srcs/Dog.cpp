@@ -6,11 +6,11 @@
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 22:28:12 by sfaugere          #+#    #+#             */
-/*   Updated: 2024/01/12 23:55:29 by sfaugere         ###   ########.fr       */
+/*   Updated: 2024/01/13 00:55:17 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include <iostream>
 #include "Brain.hpp"
@@ -25,6 +25,7 @@ Dog::Dog(void)
 Dog::Dog(Dog const &rhs) : AAnimal(rhs)
 {
 	std::cout << "Dog Copy Constructor Called" << std::endl;
+	this->_ideas = new Brain;
 	*this = rhs;
 }
 
@@ -36,7 +37,12 @@ Dog::~Dog(void)
 
 Dog & Dog::operator=(Dog const & rhs)
 {
+	std::cout << "Dog Copy Operator Called" << std::endl;
 	this->_type = rhs._type;
+	// this->_ideas = new Brain;
+	for(int i = 0; i < 100; i++)
+		this->_ideas->setIdea(rhs.getIdea(i), i);
+	// this->_ideas = rhs._ideas;
 	return *this;
 }
 

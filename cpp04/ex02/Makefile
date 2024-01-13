@@ -6,7 +6,7 @@
 #    By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/15 21:24:03 by sfaugere          #+#    #+#              #
-#    Updated: 2024/01/12 23:49:50 by sfaugere         ###   ########.fr        #
+#    Updated: 2024/01/13 00:44:10 by sfaugere         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ BUILD_DIR 	= objs
 INC			= includes
 
 ### Sources ###
-SRCS += Animal.cpp \
+SRCS += AAnimal.cpp \
 		Cat.cpp \
 		Dog.cpp \
 		Brain.cpp \

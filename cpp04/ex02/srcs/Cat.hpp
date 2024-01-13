@@ -6,14 +6,14 @@
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 15:50:07 by sfaugere          #+#    #+#             */
-/*   Updated: 2024/01/12 23:53:05 by sfaugere         ###   ########.fr       */
+/*   Updated: 2024/01/13 00:45:09 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 # include <string>
 

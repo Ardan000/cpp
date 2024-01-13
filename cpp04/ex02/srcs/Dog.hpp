@@ -6,14 +6,14 @@
 /*   By: sfaugere <sfaugere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 22:27:45 by sfaugere          #+#    #+#             */
-/*   Updated: 2024/01/12 23:53:05 by sfaugere         ###   ########.fr       */
+/*   Updated: 2024/01/13 00:45:16 by sfaugere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
 class Dog : public AAnimal
